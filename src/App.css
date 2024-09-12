@@ -24,19 +24,20 @@
   height: 15vh;
   display: flex;
   z-index: 1;
-  background-color: var(--nav);
   cursor: pointer;
   position: fixed!important;
   text-align: center;
   align-items: center;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px); 
 }
 nav{
   display: flex;
   margin-right: 30%;
 }
 .navbar a.active{
-  color: #fff;
-  text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+  color: rgb(250, 251, 252);
+  text-shadow: 0 0 10px var(--blue), 0 0 20px var(--blue), 0 0 30px var(--blue);
   text-decoration: overline;
 }
 .a{
@@ -45,12 +46,12 @@ nav{
 }
 .navbar a{
   text-decoration: none;
-  color: var(--unActiveMenu);
+  color:  slategrey;
   transition: 0.5s;
 }
 .navbar a:hover{
-  color: #fff;
-  text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+  color:  rgb(250, 251, 252);
+  text-shadow: 0 0 10px var(--blue), 0 0 20px var(--blue), 0 0 30px var(--blue);
   transition: 0.5s;
 }
 .nav-btn{
@@ -90,6 +91,7 @@ nav{
   color: var(--blue);
   background-color: var(--white);
   font-weight: bold;
+  border: 1px solid var(--blue);
 }
 .btn2:hover{
   text-shadow: 0 0 10px var(--blue), 0 0 20px var(--blue), 0 0 30px var(--blue);
@@ -168,6 +170,24 @@ nav{
   top: 13%;
   text-align: center;
 }
+
+.mesh-item {
+  background-size: cover;
+  animation: wiggle 2s infinite alternate;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .dashDiv{
   margin-left: auto;
   margin-top: 3%;
